@@ -1,6 +1,6 @@
 from tkinter import *
 from PIL import Image, ImageFilter
-import os, time, webbrowser, easygui, subprocess
+import os, webbrowser, easygui
 
 
 def input_img():
@@ -140,9 +140,67 @@ def fi_ng_ed_ges():
 
     win.mainloop()
 
+
+def smo_oth():
+    img = Image.open(input_file)
+    img = img.filter(ImageFilter.SMOOTH)
+    img.show()
+
+    img.save('saved_filpic.png')
+
+    win = Tk()
+    win.geometry('650x5')
+    win.resizable(width=False, height=False)
+    win.title('Изображение сохранено в корневую папку приложения под названием - saved_filpic')
+
+    dir = os.path.abspath(os.curdir)
+    os.system(r"explorer.exe " + dir)
+
+    win.mainloop()
+
+
+def smo_oth_more():
+    img = Image.open(input_file)
+    img = img.filter(ImageFilter.SMOOTH_MORE)
+    img.show()
+
+    img.save('saved_filpic.png')
+
+    win = Tk()
+    win.geometry('650x5')
+    win.resizable(width=False, height=False)
+    win.title('Изображение сохранено в корневую папку приложения под названием - saved_filpic')
+
+    dir = os.path.abspath(os.curdir)
+    os.system(r"explorer.exe " + dir)
+
+    win.mainloop()
+
+
+def sh_ar_pen():
+    img = Image.open(input_file)
+    img = img.filter(ImageFilter.SHARPEN)
+    img.show()
+
+    img.save('saved_filpic.png')
+
+    win = Tk()
+    win.geometry('650x5')
+    win.resizable(width=False, height=False)
+    win.title('Изображение сохранено в корневую папку приложения под названием - saved_filpic')
+
+    dir = os.path.abspath(os.curdir)
+    os.system(r"explorer.exe " + dir)
+
+    win.mainloop()
+
+
+def u_r_l():
+    webbrowser.open('https://vk.com/serv_studio')
+
 root = Tk()
 root.config(bg='lavender')
-root.geometry('500x400')
+root.geometry('500x325')
 root.title('FilPic')
 root.resizable(width=False, height=False)
 root.iconbitmap('data\\icon.ico')
@@ -178,5 +236,25 @@ emboss.place(x=362, y=105)
 find_edges = Button(root, text='FIND EDGES')
 find_edges.config(width=18, height=2, bg='white', command=fi_ng_ed_ges)
 find_edges.place(x=2, y=155)
+
+smooth = Button(root, text='SMOOTH')
+smooth.config(width=18, height=2, bg='white', command=smo_oth)
+smooth.place(x=182, y=155)
+
+smooth_more = Button(root, text='SMOOTH MORE')
+smooth_more.config(width=18, height=2, bg='white', command=smo_oth_more)
+smooth_more.place(x=362, y=155)
+
+sharpen = Button(root, text='SHARPEN')
+sharpen.config(width=18, height=2, bg='white', command=sh_ar_pen)
+sharpen.place(x=182, y=205)
+
+url = Button(root, text='Страница разработчика')
+url.config(width=20, height=1, bg='white', command=u_r_l)
+url.place(x=1, y=300)
+
+info = Label(root, text='Создано: Матвей Воронцов | Service Studio', fg='gray', bg='lavender')
+info.config(font=('Arial', 9))
+info.place(x=250, y=305)
 
 root.mainloop()
