@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>552</width>
+    <height>508</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>FilPic - Графический редактор</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(65, 65, 65)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="take_img_but">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#take_img_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 11px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#take_img_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Открыть файл</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="folder_to_img_but">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>450</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(125, 125, 125);
+color: white;
+font-size: 11px</string>
+    </property>
+    <property name="text">
+     <string>Открыть папку с изображениями</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="text_status">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>450</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>50</y>
+      <width>321</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size: 15px;color: white</string>
+    </property>
+    <property name="text">
+     <string>Перед работой откройте файл (изображение)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="open_converter_but">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>0</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#open_converter_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 11px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#open_converter_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Открыть конвертер</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>535</width>
+      <height>136</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0">
+      <widget class="QPushButton" name="emboss_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#emboss_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#emboss_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#emboss_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>EMBOSS</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="rbg_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#rbg_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#rbg_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#rbg_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>RBG</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="eem_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#eem_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#eem_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#eem_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>EDGE ENHANCE MORE</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pushButton_3 {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#pushButton_3:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#pushButton_3:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>GRB</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="gbr_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#gbr_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#gbr_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#gbr_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>GBR</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QPushButton" name="negativ_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#negativ_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#negativ_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#negativ_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Негатив</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="fe_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#fe_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#fe_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#fe_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>FIND EDGES</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="contour_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#contour_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#contour_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#contour_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>CONTOUR</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="ee_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#ee_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#ee_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#ee_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>EDGE ENHANCE</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="blur_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#blur_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#blur_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#blur_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>BLUR</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="hbi_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#hbi_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#hbi_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#hbi_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>ЧБИ</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="bgr_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#bgr_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#bgr_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#bgr_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>BGR</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="save_img_but">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>410</y>
+      <width>531</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(125, 125, 125);
+color: white;
+font-size: 13px</string>
+    </property>
+    <property name="text">
+     <string>Сохранить изображение</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="quant_slider">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>291</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="but_quant">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>222</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#but_quant {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#but_quant:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#but_quant:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Применить уровень QUANT</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="gaus_slider">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>270</y>
+      <width>291</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="but_gaus">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>262</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#but_gaus {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#but_gaus:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#but_gaus:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Применить уровень размытия</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="res_quant_label">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>222</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font-size: 22px;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="res_gaus_label">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>260</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font-size: 22px;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="inst_but">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>0</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>WhatsThisCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#inst_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 11px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#inst_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Справка</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="chek_result">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>531</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(125, 125, 125);
+color: white;
+font-size: 13px</string>
+    </property>
+    <property name="text">
+     <string>Предпросмотр наложенного фильтра</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>340</y>
+      <width>531</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="remove_filters_but">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>531</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#remove_filters_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 4px;
+	height: 24px;
+}
+
+QPushButton#remove_filters_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#remove_filters_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Сброс наложенных фильтров</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

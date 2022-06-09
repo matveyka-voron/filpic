@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>482</width>
+    <height>365</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FilPic - Конвертер</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(65, 65, 65)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="more_imgs_but">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#more_imgs_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 11px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#more_imgs_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Выбрать изображения</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>461</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="png_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#png_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#png_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#png_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>.PNG</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="bmp_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#bmp_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#bmp_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#bmp_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>.BMP</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="webp_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#webp_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#webp_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#webp_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>.WebP</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="jpg_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#jpg_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#jpg_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#jpg_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>.JPG</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pdf_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pdf_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#pdf_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#pdf_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>.PDF</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>160</y>
+      <width>431</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size: 14px; color: white</string>
+    </property>
+    <property name="text">
+     <string>Нельзя сжимать изображение до уровня, выше его собственного</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>461</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="1">
+      <widget class="QPushButton" name="fullhd_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#fullhd_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#fullhd_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#fullhd_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Сжать до Full HD</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="ultrahd_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#ultrahd_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#ultrahd_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#ultrahd_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Сжать до Ultra HD</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="hd_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#hd_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#hd_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#hd_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Сжать до HD</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="p480_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#p480_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#p480_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#p480_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Сжать до 480p</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="p360_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#p360_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#p360_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#p360_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Сжать до 360p</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="p240_but">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#p240_but {
+	background-color: rgb(125, 125, 125);
+	color: white;
+	font-size: 13px;
+	border-radius: 3px;
+	height: 24px;
+}
+
+QPushButton#p240_but:hover {
+	background-color: rgb(157, 157, 157);
+	border-radius: 7px;
+}
+
+QPushButton#p240_but:focus {
+	background-color: rgb(77, 77, 77);
+	border-radius: 5px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Сжать до 240p</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>310</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(125, 125, 125);
+color: white;
+font-size: 11px;</string>
+    </property>
+    <property name="text">
+     <string>Открыть папку с изображениями</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>310</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>461</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
